@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    list-style : none;
+    text-decoration: none;
+    color: var(--black);
+    user-select: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+header .burger-icon{
+    display: none;
+}
+:root{
+    --black : #1c1c1c;
+    --grey : #5c5c5c;
+    --light : #efefef;
+}
+header{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    margin-left: 1rem;
+}
+header ul li a{
+    font-weight: 500;
+}
+.logo{
+    font-family: 'Jockey one', sans-serif;
+    font-weight: 400;
+}
+
+header ul .button img{
+    width: 0;
+    transition: .2s ease-in-out;
+    margin-right: 10px;
+}
+header ul li a:hover{
+    color: var(--grey);
+}
+header .download-btn{
+    box-shadow: none;
+    background-color: #1c1c1c;
+    color: white;
+}
+header ul .download-btn:hover{
+    color: white;
+}
+header .download-btn img{
+    filter: invert();
+}
+/* components */
+.header{
+    font-family: 'Jockey one', sans-serif;
+}
+.download-btn{
+    margin-left: 2rem;
+    background-color: white;
+    padding: .5rem 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0,0,0,50%);
+    display: flex;
+}
+.download-btn img{
+    margin-right: 10px;
+    width: 0;
+    transition: .2s ease-in-out;
+}
+
+.download-btn:hover img{
+    width: 16px;
+    transition: .1s ease-in-out;
+}
+/* Hero Section */
+
+.hero{
+    min-height: 86dvh;
+    background: url(media/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 2rem;
+    border-radius: 25px 25px 0 0;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 150px rgba(0,0,0,50%) inset;
+}
+.hero .logo{
+    font-size: 126px;
+    color: white;
+    text-shadow: 0 0 25px rgba(0,0,0,50%);
+    user-select: none;
+    
+}
+.hero .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .info .download-btn{
+    box-sizing: none;
+}
+.hero .info p{
+    text-shadow: 0 0 10px rgba(0,0,0,50%);
+    color: white;
+    font-size: 21px;
+}
+/* About section */
+.about{
+    min-height: 80dvh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:0 2rem;
+    margin-top: 2rem;
+    background: url(media/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 100px 100px black inset;
+    padding: 2rem;
+}
+.about .header{
+    font-size: 39px;
+    color: white;
+}
+.about .sub-div{
+    background-color: rgba(0,0,0,25%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: center;
+    font-size: 21px;
+}
+.about .sub-div div ul{
+    margin-top: 2rem;
+}
+.about .sub-div li, .about .sub-div strong{
+    color: white;
+    text-shadow: 0 0 15px black;
+}
+.about .sub-div:nth-child(1){
+    margin-right: 1rem;
+}
+.about .sub-div:nth-child(2){
+    margin-left: 1rem;
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    background-color: var(--black);
+    border-radius: 25px 25px 0 0;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .logo, footer a{
+    color: white;
+}
+footer .download-btn{
+    color: var(--black);
+}
+/* Responsivness */
+@media only screen and (max-width : 800px) {
+    .about{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about .sub-div:nth-child(1){
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .about .sub-div:nth-child(2){
+        margin: 0;
+    }
+}
+@media only screen and (max-width : 600px) {
+    header .burger-icon{
+        display: unset;
+    }
+    header .burger-icon .bar{
+        width: 40px;
+        height: 5px;
+        margin-bottom: 5px;
+        background-color: var(--black);
+    }
+    .nav{
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid var(--black);
+        left: 50%;
+        transform: translate(-50%,0);
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: center;
+        min-height: 300px;
+        top: -30rem;
+        border-radius: 15px;
+        transition: .2s ease-in-out;
+    }
+    .nav.active{
+        top: 5rem;
+    }
+    .nav .download-btn{
+        margin: 0 ;
+        margin-top: 2rem;
+    }
+    .nav::after{
+        content: "Note : WarFront isn't available on mobile Devices yet";
+        color: red;
+        margin-top: 1rem;
+    }
+    .hero{
+        background: url(media/bg\ mob.png);
+        background-repeat: no-repeat;
+        min-height: 750px;
+    }
+    .hero .logo{
+        font-size: 100px;
+    }
+    .hero .info{
+        flex-direction: column;
+    }
+    .hero .info .download-btn{
+        margin-top: 2rem;
+    }
+    .about{
+        background: url(media/tab\ bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1rem;
+    }
+    .about .sub-div{
+        font-size: 19px;
+    }
+    .about .sub-div:nth-child(1){
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .hero{
+        margin: 0 1rem;
+    }
+    .hero .logo{
+        font-size: 72px;
+    }
+    .about{
+        margin: 0 1rem;
+    }
+    .about .sub-div{
+        font-size: 16px;
+    }
+    .about .header{
+        font-size: 26px;
+    }
+    footer{
+        margin: 0 1rem;
+        margin-top: 3rem;
+        flex-direction: column;
+    }
+    footer .download-btn{
+        margin: 0;
+    }
+    footer ul, footer .download-btn{
+        margin-top: .5rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .about{
+        padding: 1rem;
+    }
+    .hero{
+        padding: 1rem;
+        text-align: center;
+    }
+    .hero .logo{
+        font-size: 62px;
+    }
+}
